@@ -41,6 +41,7 @@ conn.login(user, pass + securityToken, function (err, res) {
     console.log('************ STATUS ***************');
     console.log(JSON.stringify(data.payload.Status));
     //socket.send(JSON.stringify(data));
+    io.emit('chat message', JSON.stringify(data));
     console.log('Data sent to clients!!');
   });
 });
