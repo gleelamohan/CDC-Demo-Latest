@@ -19,6 +19,8 @@ io.on('connection', (socket) => {
   });
 });
 
+var replayId = -1; // -1 = Only New messages | -2 = All Window and New
+var conn = new jsforce.Connection();
 conn.login(user, pass + securityToken, function (err, res) {
   console.log('loggedin');
   if (err) {
