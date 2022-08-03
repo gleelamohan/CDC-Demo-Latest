@@ -86,6 +86,7 @@
 
     socket.on('chat message', function (msg) {
       var cdcResponse = JSON.parse(msg);
+      console.log(cdcResponse);
       for (var key in cdcResponse.payload) {
         if (cdcResponse.hasOwnProperty(key)) {
           var item = document.createElement('li');
