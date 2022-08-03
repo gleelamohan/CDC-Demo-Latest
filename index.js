@@ -38,8 +38,8 @@ conn.login(user, pass + securityToken, function (err, res) {
   subscription = client.subscribe(channel, function (data) {
     console.log('Received CDC Event');
     console.log(JSON.stringify(data));
-    console.log('************ STATUS ***************');
-    console.log(JSON.stringify(data.payload.Status));
+    // console.log('************ STATUS ***************');
+    // console.log(JSON.stringify(data.payload.Status));
     //socket.send(JSON.stringify(data));
     io.emit('chat message', JSON.stringify(data));
     console.log('Data sent to clients!!');
