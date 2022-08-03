@@ -85,10 +85,15 @@
      });*/
 
     socket.on('chat message', function (msg) {
-      var item = document.createElement('li');
-      item.textContent = msg;
-      messages.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
+      var cdcResponse = JSON.parse(msg);
+      for (var key in cdcResponse.payload) {
+        if (cdcResponse.hasOwnProperty(key)) {
+          var item = document.createElement('li');
+          item.textContent = msg;
+          messages.appendChild(item);
+          window.scrollTo(0, document.body.scrollHeight);
+        }
+      }
     });
   </script>
 </body>
