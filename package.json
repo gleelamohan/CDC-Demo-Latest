@@ -4,6 +4,7 @@
   "description": "my first socket.io app",
   "dependencies": {
     "express": "^4.17.1",
+    "jsforce": "^1.10.1",
     "socket.io": "^4.1.2"
   },
   "scripts": {
