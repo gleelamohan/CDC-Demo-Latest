@@ -88,7 +88,7 @@
       var cdcResponse = JSON.parse(msg);
       console.log(cdcResponse);
       for (var key in cdcResponse.payload) {
-        if (cdcResponse.hasOwnProperty(key)) {
+        if (cdcResponse.payload.hasOwnProperty(key)) {
           var item = document.createElement('li');
           item.textContent = msg;
           messages.appendChild(item);
